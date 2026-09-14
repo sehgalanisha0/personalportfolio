@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisha Sehgal | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0033;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 22px;
+        }
+
+        header p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+        }
+
+        .education {
+            border-left: 4px solid #cc0033;
+            padding-left: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #eeeeee;
+            padding: 9px 15px;
+            border-radius: 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #555;
+        }
+
+        .contact a {
+            color: #cc0033;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Anisha Sehgal</h1>
+    <h2>Accounting & Business Analytics Student | Rutgers Business School</h2>
+
+    <p>
+        Accounting and Business Analytics & Information Technology student
+        at Rutgers Business School interested in applying analytical,
+        financial, and technology skills to solve real-world business problems.
+    </p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="education">
+            <h3>Rutgers University – New Brunswick</h3>
+            <p><strong>Rutgers Business School</strong></p>
+            <p>Accounting & Business Analytics and Information Technology (BAIT)</p>
+            <p>Expected Graduation: December 2028</p>
+        </div>
+
+        <br>
+
+        <p>
+            I am interested in developing experience across accounting,
+            analytics, and financial services. Through my coursework,
+            professional experiences, and projects, I am continuing to build
+            my analytical, problem-solving, communication, and technical skills.
+        </p>
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Microsoft Office</span>
+            <span class="skill">Accounting</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Financial Analysis</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Attention to Detail</span>
+            <span class="skill">Organization</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Customer Service</span>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Goldman Sachs Operations Job Simulation</h3>
+
+                <p>
+                    Completed a virtual Wealth Management Operations simulation
+                    through Forage involving transaction monitoring, operational
+                    problem-solving, risk assessment, and cross-functional
+                    decision-making.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Wealth Management Trade Fail Analysis</h3>
+
+                <p>
+                    Analyzed financial transaction data to identify pending
+                    transactions and potential risks affecting a time-sensitive
+                    client transaction. Developed a Trade Fail Report outlining
+                    risks, mitigation strategies, responsible teams, and
+                    recommended follow-up actions.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Personal Transaction Planning</h3>
+
+                <p>
+                    Created an Excel-based financial plan for a major personal
+                    purchase by developing a budget, tracking expenses and
+                    available funds, monitoring transaction risks, and
+                    identifying opportunities to improve the process.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h2>Connect With Me</h2>
+
+        <p>
+            I'm always interested in opportunities to learn, build my
+            professional experience, and connect with others in accounting,
+            analytics, and business.
+        </p>
+
+        <!-- We can add your LinkedIn link here later. -->
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Anisha Sehgal</p>
+</footer>
+
+</body>
+</html>
