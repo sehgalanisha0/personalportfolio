@@ -1,274 +1,778 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Anisha Sehgal | Portfolio</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background-color: #f7f7f7;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff8fb;
+            color: #30242a;
+            line-height: 1.7;
+        }
+
+
+        /* ---------- HERO ---------- */
+
         header {
-            background-color: #ffffff;
-            padding: 70px 20px;
+            min-height: 470px;
+            background: linear-gradient(
+                135deg,
+                #fff1f6,
+                #f9d6e4,
+                #efb8ce
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
-            border-bottom: 4px solid #cc0033;
+            padding: 70px 25px;
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .hello {
+            display: inline-block;
+
+            background-color: #ffffff;
+            color: #a83b68;
+
+            padding: 7px 16px;
+            border-radius: 30px;
+
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
         }
 
         header h1 {
-            font-size: 42px;
+            font-size: 52px;
+            color: #632840;
             margin-bottom: 8px;
         }
 
-        header h2 {
-            font-size: 20px;
-            font-weight: normal;
-            color: #555;
-            margin-bottom: 22px;
+        .subtitle {
+            font-size: 21px;
+            color: #8e4b67;
+            font-weight: bold;
+            margin-bottom: 25px;
         }
 
-        header p {
-            max-width: 760px;
+        .statement {
+            max-width: 750px;
             margin: auto;
-            font-size: 17px;
+
+            font-size: 18px;
+            color: #49363e;
         }
+
+
+        /* ---------- NAVIGATION ---------- */
 
         nav {
-            background-color: #222;
-            text-align: center;
-            padding: 14px;
+            background-color: #692b45;
+
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
+            padding: 16px 20px;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 18px;
             font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ffdce9;
         }
 
+
+        /* ---------- MAIN ---------- */
+
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            padding: 20px;
+            padding: 45px 20px;
         }
 
         section {
-            background-color: white;
-            margin: 30px 0;
-            padding: 35px;
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 31px;
+            color: #632840;
+            margin-bottom: 8px;
+        }
+
+        .section-line {
+            height: 4px;
+            width: 55px;
+            background-color: #dc7fa5;
+
             border-radius: 10px;
+            margin-bottom: 25px;
         }
 
-        h2 {
-            margin-bottom: 18px;
+
+        /* ---------- ABOUT ---------- */
+
+        .about-card {
+            background-color: #ffffff;
+
+            border: 1px solid #f4d7e3;
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow: 0px 6px 22px rgba(133, 59, 89, .07);
         }
 
-        .education {
-            border-left: 4px solid #cc0033;
-            padding-left: 20px;
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 35px;
+            align-items: center;
         }
 
-        .skills {
+        .education-box {
+            background-color: #fff0f6;
+
+            border-left: 5px solid #c95987;
+            border-radius: 10px;
+
+            padding: 25px;
+        }
+
+        .education-box h3 {
+            color: #702d49;
+            margin-bottom: 4px;
+        }
+
+        .school {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .about-text p {
+            margin-bottom: 13px;
+        }
+
+
+        /* ---------- SKILLS ---------- */
+
+        .skills-card {
+            background-color: #ffffff;
+
+            border: 1px solid #f4d7e3;
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow: 0px 6px 22px rgba(133, 59, 89, .07);
+        }
+
+        .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .skill {
-            background-color: #eeeeee;
-            padding: 9px 15px;
-            border-radius: 20px;
+            background-color: #fbe1eb;
+            color: #702d49;
+
+            border: 1px solid #efbfd1;
+
+            padding: 10px 17px;
+            border-radius: 25px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
         }
 
-        .projects {
+        .skill:hover {
+            background-color: #efbfd1;
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------- PROJECTS ---------- */
+
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 22px;
         }
 
-        .project {
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            padding: 22px;
+        .project-card {
+            background-color: #ffffff;
+
+            border: 1px solid #f0cedc;
+            border-radius: 18px;
+
+            padding: 28px;
+
+            box-shadow: 0px 6px 22px rgba(133, 59, 89, .07);
+
+            transition: 0.25s;
         }
 
-        .project h3 {
+        .project-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0px 12px 28px
+                rgba(133, 59, 89, .13);
+        }
+
+        .project-number {
+            color: #c95987;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+
             margin-bottom: 10px;
         }
 
-        .project p {
-            color: #555;
+        .project-card h3 {
+            color: #632840;
+            margin-bottom: 13px;
         }
 
-        .contact a {
-            color: #cc0033;
-            font-weight: bold;
-            text-decoration: none;
+        .project-card p {
+            color: #5b4a51;
         }
+
+        .project-tag {
+            display: inline-block;
+
+            margin-top: 18px;
+            margin-right: 6px;
+
+            background-color: #fff0f6;
+            color: #9b4368;
+
+            padding: 5px 10px;
+            border-radius: 15px;
+
+            font-size: 13px;
+        }
+
+
+        /* ---------- GOALS ---------- */
+
+        .goals-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fce8f0,
+                    #f7cfdf
+                );
+
+            border-radius: 18px;
+
+            padding: 35px;
+        }
+
+        .goals-box h3 {
+            color: #632840;
+            margin-bottom: 10px;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-card {
+            background-color: #692b45;
+            color: white;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            padding: 45px 30px;
+        }
+
+        .contact-card h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            max-width: 650px;
+
+            margin: 0 auto 22px;
+
+            color: #ffeaf2;
+        }
+
+
+        /* ---------- FOOTER ---------- */
 
         footer {
             text-align: center;
-            padding: 25px;
-            color: #666;
+
+            padding: 28px;
+
+            background-color: #fff0f6;
+            color: #805268;
+
+            font-size: 14px;
         }
 
-        @media (max-width: 600px) {
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 750px) {
+
             header h1 {
-                font-size: 34px;
+                font-size: 40px;
             }
 
-            nav a {
-                margin: 0 8px;
+            .subtitle {
+                font-size: 18px;
             }
 
-            section {
-                padding: 25px;
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
             }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <h1>Anisha Sehgal</h1>
-    <h2>Accounting & Business Analytics Student | Rutgers Business School</h2>
 
-    <p>
-        Accounting and Business Analytics & Information Technology student
-        at Rutgers Business School interested in applying analytical,
-        financial, and technology skills to solve real-world business problems.
-    </p>
+<!-- HERO / PERSONAL STATEMENT -->
+
+<header>
+
+    <div class="hero">
+
+        <div class="hello">
+            WELCOME TO MY PORTFOLIO
+        </div>
+
+        <h1>Anisha Sehgal</h1>
+
+        <div class="subtitle">
+            Accounting & Business Analytics Student
+        </div>
+
+        <p class="statement">
+            I am an Accounting and Business Analytics & Information
+            Technology student at Rutgers Business School interested
+            in using financial, analytical, and technology skills to
+            solve real-world business problems.
+        </p>
+
+    </div>
+
 </header>
 
+
+
+<!-- NAVIGATION -->
+
 <nav>
+
     <a href="#about">About</a>
+
     <a href="#skills">Skills</a>
+
     <a href="#projects">Projects</a>
+
+    <a href="#goals">Goals</a>
+
     <a href="#contact">Contact</a>
+
 </nav>
+
+
 
 <main>
 
-    <section id="about">
-        <h2>About Me</h2>
 
-        <div class="education">
-            <h3>Rutgers University – New Brunswick</h3>
-            <p><strong>Rutgers Business School</strong></p>
-            <p>Accounting & Business Analytics and Information Technology (BAIT)</p>
-            <p>Expected Graduation: December 2028</p>
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        About Me
+    </h2>
+
+    <div class="section-line"></div>
+
+
+    <div class="about-card">
+
+        <div class="about-grid">
+
+
+            <div class="education-box">
+
+                <h3>
+                    Rutgers University – New Brunswick
+                </h3>
+
+                <p class="school">
+                    Rutgers Business School
+                </p>
+
+                <p>
+                    Accounting
+                </p>
+
+                <p>
+                    Business Analytics &
+                    Information Technology (BAIT)
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>
+                        Expected Graduation:
+                    </strong>
+
+                    December 2028
+                </p>
+
+            </div>
+
+
+
+            <div class="about-text">
+
+                <p>
+                    I am building my experience across accounting,
+                    analytics, technology, and financial services
+                    while pursuing my education at Rutgers Business
+                    School.
+                </p>
+
+                <p>
+                    I enjoy work that requires organization,
+                    attention to detail, problem-solving, and
+                    understanding how financial information can
+                    support better business decisions.
+                </p>
+
+                <p>
+                    Through my coursework, work experience, and
+                    professional development opportunities, I am
+                    continuing to strengthen the skills I can bring
+                    to future accounting and business internships.
+                </p>
+
+            </div>
+
         </div>
 
-        <br>
+    </div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">
+        Skills
+    </h2>
+
+    <div class="section-line"></div>
+
+
+    <div class="skills-card">
+
+        <div class="skills-container">
+
+            <span class="skill">
+                Microsoft Excel
+            </span>
+
+            <span class="skill">
+                Microsoft Office
+            </span>
+
+            <span class="skill">
+                Accounting
+            </span>
+
+            <span class="skill">
+                Data Analysis
+            </span>
+
+            <span class="skill">
+                Financial Analysis
+            </span>
+
+            <span class="skill">
+                Problem Solving
+            </span>
+
+            <span class="skill">
+                Attention to Detail
+            </span>
+
+            <span class="skill">
+                Organization
+            </span>
+
+            <span class="skill">
+                Communication
+            </span>
+
+            <span class="skill">
+                Teamwork
+            </span>
+
+            <span class="skill">
+                Customer Service
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        Featured Projects
+    </h2>
+
+    <div class="section-line"></div>
+
+
+    <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Goldman Sachs Operations
+                Job Simulation
+            </h3>
+
+            <p>
+                Completed Goldman Sachs' Wealth Management
+                Operations job simulation through Forage.
+                The experience introduced me to transaction
+                processing, operational risk, client service,
+                and collaboration across different functions
+                within a financial institution.
+            </p>
+
+            <span class="project-tag">
+                Financial Services
+            </span>
+
+            <span class="project-tag">
+                Operations
+            </span>
+
+        </div>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Wealth Management
+                Trade Fail Analysis
+            </h3>
+
+            <p>
+                Reviewed financial transaction data for an
+                ultra-high-net-worth client and identified
+                pending transactions that could affect a
+                time-sensitive purchase. I developed a Trade
+                Fail Report outlining risks, responsible
+                teams, mitigation strategies, and recommended
+                follow-up actions.
+            </p>
+
+            <span class="project-tag">
+                Risk Analysis
+            </span>
+
+            <span class="project-tag">
+                Problem Solving
+            </span>
+
+        </div>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Personal Transaction
+                Planning
+            </h3>
+
+            <p>
+                Created an Excel-based transaction plan for
+                purchasing a new laptop for school. I built a
+                budget, tracked available funds and expenses,
+                reviewed potential transaction risks, and
+                identified ways to make the purchasing process
+                more organized and efficient.
+            </p>
+
+            <span class="project-tag">
+                Excel
+            </span>
+
+            <span class="project-tag">
+                Budgeting
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- CAREER GOALS -->
+
+<section id="goals">
+
+    <h2 class="section-title">
+        What I'm Working Toward
+    </h2>
+
+    <div class="section-line"></div>
+
+
+    <div class="goals-box">
+
+        <h3>
+            Building experience at the intersection
+            of accounting, analytics, and technology.
+        </h3>
 
         <p>
-            I am interested in developing experience across accounting,
-            analytics, and financial services. Through my coursework,
-            professional experiences, and projects, I am continuing to build
-            my analytical, problem-solving, communication, and technical skills.
+            As I continue my education at Rutgers, I am
+            interested in gaining hands-on experience through
+            accounting and business internships where I can
+            apply what I am learning, continue developing my
+            technical skills, and learn from professionals in
+            the field.
         </p>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <section id="skills">
-        <h2>Skills</h2>
 
-        <div class="skills">
-            <span class="skill">Microsoft Excel</span>
-            <span class="skill">Microsoft Office</span>
-            <span class="skill">Accounting</span>
-            <span class="skill">Data Analysis</span>
-            <span class="skill">Financial Analysis</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">Attention to Detail</span>
-            <span class="skill">Organization</span>
-            <span class="skill">Communication</span>
-            <span class="skill">Teamwork</span>
-            <span class="skill">Customer Service</span>
-        </div>
-    </section>
+<!-- CONTACT -->
 
+<section id="contact">
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <div class="contact-card">
 
-        <div class="projects">
-
-            <div class="project">
-                <h3>Goldman Sachs Operations Job Simulation</h3>
-
-                <p>
-                    Completed a virtual Wealth Management Operations simulation
-                    through Forage involving transaction monitoring, operational
-                    problem-solving, risk assessment, and cross-functional
-                    decision-making.
-                </p>
-            </div>
-
-
-            <div class="project">
-                <h3>Wealth Management Trade Fail Analysis</h3>
-
-                <p>
-                    Analyzed financial transaction data to identify pending
-                    transactions and potential risks affecting a time-sensitive
-                    client transaction. Developed a Trade Fail Report outlining
-                    risks, mitigation strategies, responsible teams, and
-                    recommended follow-up actions.
-                </p>
-            </div>
-
-
-            <div class="project">
-                <h3>Personal Transaction Planning</h3>
-
-                <p>
-                    Created an Excel-based financial plan for a major personal
-                    purchase by developing a budget, tracking expenses and
-                    available funds, monitoring transaction risks, and
-                    identifying opportunities to improve the process.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="contact" class="contact">
-        <h2>Connect With Me</h2>
+        <h2>
+            Let's Connect
+        </h2>
 
         <p>
-            I'm always interested in opportunities to learn, build my
-            professional experience, and connect with others in accounting,
+            I am always interested in learning about new
+            opportunities, building professional connections,
+            and continuing to grow within accounting,
             analytics, and business.
         </p>
 
-        <!-- We can add your LinkedIn link here later. -->
+    </div>
 
-    </section>
+</section>
+
 
 </main>
 
 
+
 <footer>
-    <p>© 2026 Anisha Sehgal</p>
+
+    © 2026 Anisha Sehgal •
+    Rutgers Business School
+
 </footer>
 
+
 </body>
+
 </html>
